@@ -1,0 +1,402 @@
+.section {
+  padding: 100px 0;
+}
+.subtle {
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.head {
+  max-width: 640px;
+  margin-bottom: 52px;
+}
+
+/* ---------- About ---------- */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.aboutText {
+  margin-top: 18px;
+  color: var(--text-muted);
+  font-size: 17px;
+}
+.stats {
+  display: grid;
+  gap: 16px;
+}
+.statCard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+.statValue {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.statLabel {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+/* ---------- Education card ---------- */
+.eduCard {
+  margin-top: 28px;
+  padding: 22px 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.eduLabel {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  padding: 3px 11px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.eduSchool {
+  font-size: 17px;
+  font-weight: 700;
+}
+.eduDegree {
+  color: var(--text);
+  font-size: 15px;
+  margin-top: 2px;
+}
+.eduDetail {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ---------- Experience timeline ---------- */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 6px;
+}
+.timelineItem {
+  position: relative;
+  padding-left: 34px;
+}
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 20px;
+  bottom: -30px;
+  width: 2px;
+  background: linear-gradient(var(--border-strong), transparent);
+}
+.timelineItem:last-child::before {
+  display: none;
+}
+.timelineDot {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.timelineCard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.timelineCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+.timelineTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.jobRole {
+  font-size: 18px;
+  font-weight: 700;
+}
+.jobPeriod {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.jobCompany {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 3px;
+}
+.jobPoints {
+  margin: 14px 0 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.jobPoints li {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+.jobPoints li::marker {
+  color: var(--accent);
+}
+
+/* ---------- Skills ---------- */
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.skillCard {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.skillCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+.skillGroup {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 6px 13px;
+  border-radius: 8px;
+}
+
+/* ---------- Projects ---------- */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+  height: 100%;
+}
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+.thumb {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.thumbInitial {
+  font-size: 54px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.projectBody {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.projectTitle {
+  font-size: 19px;
+  font-weight: 700;
+}
+.projectDesc {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 15px;
+  flex: 1;
+}
+.tagSm {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.projectBody .tags {
+  margin-top: 16px;
+}
+.projectLink {
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+/* ---------- CTA / Contact ---------- */
+.ctaSection {
+  padding: 90px 0 60px;
+}
+.ctaCard {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, var(--bg-subtle));
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 64px 32px;
+  box-shadow: var(--shadow-md);
+}
+.ctaGlow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(
+    circle at center,
+    rgba(55, 182, 255, 0.25),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.ctaTitle {
+  position: relative;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+.ctaSub {
+  position: relative;
+  margin: 14px auto 0;
+  max-width: 520px;
+  color: var(--text-muted);
+  font-size: 17px;
+}
+.ctaActions {
+  position: relative;
+  margin-top: 34px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.profileLink {
+  position: relative;
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-bottom: 1px dashed var(--border-strong);
+  padding-bottom: 2px;
+}
+.profileLink:hover {
+  color: var(--accent-strong);
+  border-bottom-color: var(--accent);
+}
+.ctaContact {
+  position: relative;
+  margin-top: 32px;
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+.ctaContact a:hover {
+  color: var(--accent-strong);
+}
+
+.footer {
+  margin-top: 46px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .skillGrid,
+  .projectGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .section {
+    padding: 72px 0;
+  }
+  .stats,
+  .skillGrid,
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaCard {
+    padding: 48px 22px;
+  }
+}
