@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { profile } from "@/lib/data";
 import { useLang } from "./LanguageContext";
 import styles from "./Hero.module.css";
@@ -13,9 +14,16 @@ export default function Hero() {
       <div className={styles.grid} aria-hidden />
 
       <div className={`container ${styles.inner}`}>
-        <span className={`${styles.badge} ${styles.drop}`} style={{ animationDelay: "0.05s" }}>
-          <span className={styles.pulse} /> {t.hero.badge}
-        </span>
+        <div className={`${styles.avatarWrap} ${styles.drop}`} style={{ animationDelay: "0s" }}>
+          <Image
+            src={profile.photos.headshot}
+            alt={profile.fullName}
+            width={128}
+            height={128}
+            className={styles.avatar}
+            priority
+          />
+        </div>
 
         <h1 className={`${styles.title} ${styles.drop}`} style={{ animationDelay: "0.15s" }}>
           {t.hero.greeting}{" "}

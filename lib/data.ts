@@ -13,6 +13,11 @@ export const profile = {
   email: "tanakorn.niamchaona@gmail.com",
   phone: "+66 92 964 6940",
   phoneRaw: "+66929646940",
+  // รูปภาพ (วางไฟล์ไว้ใน public/)
+  photos: {
+    headshot: "/headshot.jpg", // รูปหน้าตรง — ใช้เป็น avatar วงกลมใน Hero
+    portrait: "/portrait.jpg", // รูปยืน — ใช้ในเซกชันเกี่ยวกับฉัน
+  },
   socials: {
     github: "",
     linkedin: "",
@@ -43,20 +48,20 @@ const ROLE = "Full-Stack Developer & Embedded / Firmware Engineer";
 // หมวดทักษะ (ชื่อเทคโนโลยีเป็นสากล ใช้ร่วมกันได้)
 const SKILL_GROUPS = [
   {
-    group: "Embedded & Hardware",
-    items: ["C / C++", "Firmware", "Circuit & PCB Design", "ESP32", "Arduino", "Raspberry Pi", "Jetson"],
-  },
-  {
-    group: "IoT & Protocols",
-    items: ["MQTT", "HTTP", "UART", "I2C", "SPI", "RS485 / RS232", "OTA Update"],
+    group: "Frontend & Mobile",
+    items: ["React.js", "Next.js", "React Native", "Electron", "TypeScript", "JavaScript"],
   },
   {
     group: "Backend & Database",
     items: ["Node.js", "REST API", "Fastify", "NestJS", "MySQL", "SQL Server", "MongoDB", "Docker"],
   },
   {
-    group: "Frontend & Mobile",
-    items: ["React.js", "React Native", "Electron", "TypeScript", "Python", "PyTorch"],
+    group: "Embedded & Hardware",
+    items: ["C / C++", "Firmware", "Circuit & PCB Design", "ESP32", "Arduino", "Raspberry Pi", "Jetson"],
+  },
+  {
+    group: "IoT & Protocols",
+    items: ["MQTT", "HTTP", "UART", "I2C", "SPI", "RS485 / RS232", "OTA Update"],
   },
 ];
 
@@ -117,7 +122,7 @@ export const dict: Record<Lang, Content> = {
       greeting: "สวัสดี, ผมคือ",
       role: ROLE,
       tagline:
-        "ผมออกแบบวงจร เขียนเฟิร์มแวร์ และสร้างระบบ IoT แบบครบวงจร ตั้งแต่ฮาร์ดแวร์จนถึงเว็บและแอปพลิเคชัน",
+        "ผมสร้างเว็บและแอปพลิเคชันแบบครบวงจร ตั้งแต่ Frontend, Backend ไปจนถึงฮาร์ดแวร์และระบบ IoT",
       ctaWork: "ดูผลงาน →",
       ctaResume: "ดาวน์โหลด Resume",
       scroll: "เลื่อนลง",
@@ -125,10 +130,10 @@ export const dict: Record<Lang, Content> = {
     },
     about: {
       eyebrow: "เกี่ยวกับฉัน",
-      title: "จากวงจรและเฟิร์มแวร์ สู่เว็บและแอปแบบครบวงจร",
+      title: "Full-Stack Developer ที่สร้างได้ครบ ตั้งแต่เว็บ แอป จนถึงฮาร์ดแวร์",
       paragraphs: [
-        "ผมเป็นนักพัฒนาสาย Embedded Systems ที่หลงใหลในฮาร์ดแวร์และการสร้างระบบแบบครบวงจร ความเชี่ยวชาญหลักคือการออกแบบวงจรและพัฒนาเฟิร์มแวร์บนแพลตฟอร์มอย่าง ESP32, Arduino, Raspberry Pi และ Jetson",
-        "สร้างระบบสื่อสารสำหรับอุปกรณ์อุตสาหกรรมด้วยโปรโตคอล RS485, RS232 และ UART พร้อมทั้งมีประสบการณ์ด้าน Frontend และ Backend ระดับกลาง โดยเข้าใจภาพรวมสถาปัตยกรรมของระบบทั้งหมด พร้อมเรียนรู้เทคโนโลยีใหม่และรับงานที่ท้าทายอยู่เสมอ",
+        "ผมเป็น Full-Stack Developer ที่สร้างเว็บและแอปพลิเคชันแบบครบวงจร ตั้งแต่ออกแบบ UI/UX บน Frontend ด้วย React, Next.js และ React Native ไปจนถึงวางระบบ Backend และฐานข้อมูลด้วย Node.js, REST API และ SQL/NoSQL โดยเข้าใจภาพรวมสถาปัตยกรรมของทั้งระบบ",
+        "จุดแข็งที่ทำให้ผมต่างจากนักพัฒนาทั่วไป คือพื้นฐานสาย Embedded & IoT — ออกแบบวงจร เขียนเฟิร์มแวร์บน ESP32/Arduino และเชื่อมต่ออุปกรณ์จริงผ่าน MQTT และ RS485 ทำให้ผมสร้างผลิตภัณฑ์ได้ตั้งแต่ฮาร์ดแวร์จนถึงหน้าจอผู้ใช้ พร้อมเรียนรู้เทคโนโลยีใหม่และรับงานที่ท้าทายอยู่เสมอ",
       ],
       stats: [
         { value: "6+", label: "ปีประสบการณ์" },
@@ -145,7 +150,7 @@ export const dict: Record<Lang, Content> = {
     skills: {
       eyebrow: "Tech Stack",
       title: "เครื่องมือและทักษะที่ใช้",
-      sub: "เทคโนโลยีที่ผมใช้สร้างผลิตภัณฑ์ตั้งแต่ฮาร์ดแวร์ หน้าบ้าน จนถึงหลังบ้าน",
+      sub: "เทคโนโลยีที่ผมใช้สร้างเว็บและแอป ตั้งแต่ Frontend, Backend ไปจนถึงฮาร์ดแวร์และ IoT",
       groups: SKILL_GROUPS,
     },
     experience: {
@@ -247,7 +252,7 @@ export const dict: Record<Lang, Content> = {
       greeting: "Hi, I'm",
       role: ROLE,
       tagline:
-        "I design circuits, write firmware, and build end-to-end IoT systems — from hardware to web and mobile applications.",
+        "I build complete web and mobile applications — from frontend and backend all the way to hardware and IoT.",
       ctaWork: "View Work →",
       ctaResume: "Download Resume",
       scroll: "Scroll",
@@ -255,10 +260,10 @@ export const dict: Record<Lang, Content> = {
     },
     about: {
       eyebrow: "About Me",
-      title: "From circuits and firmware to full-stack web & mobile",
+      title: "A full-stack developer who builds it all — from web and apps to hardware",
       paragraphs: [
-        "I'm a versatile embedded systems developer passionate about hardware and end-to-end system development. My core expertise is circuit design and firmware development on platforms such as ESP32, Arduino, Raspberry Pi, and Jetson.",
-        "I build robust communication systems for industrial equipment using RS485, RS232, and UART. Complemented by frontend experience and mid-level backend skills — with a solid grasp of overall system architecture — I'm always ready to learn new technologies and take on challenging projects.",
+        "I'm a full-stack developer who builds complete web and mobile applications — from crafting the UI/UX on the frontend with React, Next.js, and React Native, to designing the backend and databases with Node.js, REST APIs, and SQL/NoSQL — with a solid grasp of the whole system architecture.",
+        "What sets me apart is a strong embedded & IoT foundation: circuit design, firmware on ESP32/Arduino, and connecting real devices via MQTT and RS485. That means I can build products end to end — from the hardware to the user's screen — and I'm always ready to learn new technologies and take on challenging projects.",
       ],
       stats: [
         { value: "6+", label: "Years of experience" },
@@ -275,7 +280,7 @@ export const dict: Record<Lang, Content> = {
     skills: {
       eyebrow: "Tech Stack",
       title: "Tools & Skills",
-      sub: "The technologies I use to build products — from hardware to frontend and backend.",
+      sub: "The technologies I use to build web and mobile products — from frontend and backend to hardware and IoT.",
       groups: SKILL_GROUPS,
     },
     experience: {
